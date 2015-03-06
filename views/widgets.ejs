@@ -1,0 +1,1848 @@
+<!--Tab Warlock-->
+<div class="modal fade" id="tabWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true" ng-controller="tabCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Tab Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div id="info-area"><div class="alert alert-info">Set all neccessary options and changes will take place after save...</div></div>
+                
+                <div class='container-fluid'>
+                    <div class='row-fluid'>
+                        <div class='col-lg-4'>
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">Tab Properties</h3>
+                              </div>
+                              <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="tabObjParId" class="col-sm-4 control-label">Parent id:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabObjParId" ng-model="tabObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabObjId" class="col-sm-4 control-label">Tab id:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="tabObjId" ng-model="tabObjId" placeholder="Enter Tab id">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabtype" class="col-sm-4 control-label">Tab Type:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabtype" ng-model="tabType">
+                                                <option>tabs</option>
+                                                <option>pills</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabStacking" class="col-sm-4 control-label">Tab Stacking:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabStacking" ng-model="tabStacking">
+                                                <option>normal</option>
+                                                <option>stacked</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabInstWidth" class="col-sm-4 control-label">Instance Width:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabInstWidth" ng-model="tabInstWidth">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabInstOffset" class="col-sm-4 control-label">Offset:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabInstOffset" ng-model="tabInstOffset">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabInstRow" class="col-sm-4 control-label">Row:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="tabRow" ng-model="tabInstRow">
+                                                <option>default</option>
+                                                <option>new-line</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tabSeq" class="col-sm-4 control-label">Sequence:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="tabSeq" ng-model="tabSeq" placeholder="Sequence Number">
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class='col-lg-4'>                            
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">Tab Nav-links</h3>
+                              </div>
+                              <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="navid" class="col-sm-4 control-label">Nav-link id:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="navid" ng-model="navid" placeholder="Enter Nav-link id">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="navtitle" class="col-sm-4 control-label">Nav-link Title:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="navtitle" ng-model="navtitle" placeholder="Enter Nav-link title">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="navtype" class="col-sm-4 control-label">Nav-link Type:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="navtype" ng-model="navtype">
+                                                <option>normal</option>
+                                                <option>menu</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <button type="button" class="btn btn-success form-control" id="addNavToList" ng-click="addNavLink()"><span class="glyphicon glyphicon-plus-sign">Add To List</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class='col-lg-4'>
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">Tab Nav-menu-links</h3>
+                              </div>
+                              <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="menunavid" class="col-sm-4 control-label">Nav-link id:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="menunavid" ng-model="menunavid" placeholder="Enter Nav-link id">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="menunavtitle" class="col-sm-4 control-label">Nav-link Title:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="menunavtitle" ng-model="menunavtitle" placeholder="Enter Nav-link title">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="parentnavid" class="col-sm-4 control-label">Nav-link Parent:</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="parentnavid" ng-model="parentnavid">
+                                                <option ng-repeat="menu in menunavs">{{menu.navid}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <button type="button" class="btn btn-success form-control" id="addNavToMenuList" ng-click="addMenuLink()"><span class="glyphicon glyphicon-plus-sign">Add To List</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class='container-fluid'>
+                    <div class='row-fluid'>
+              <div class='col-lg-8 col-lg-offset-2'>
+                
+                <ul class="nav nav-tabs">
+                  <li><a href="#navlinks" data-toggle="tab">Nav-links</a></li>
+                  <li><a href="#navmenulinks" data-toggle="tab">Nav-menu-links</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="navlinks">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Nav Links</div>
+                            <table class="table" id="navlinkstbl">
+                                <th></th><th>id</th><th>title</th><th>type</th>
+                                <tr ng-repeat="tablink in tabNavLinks"><td></td><td>{{tablink.navid}}</td><td>{{tablink.navtitle}}</td><td>{{tablink.navtype}}</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="navmenulinks">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Nav Menu Links</div>
+                            <table class="table" id="navmenulinkstbl">
+                                <th></th><th>id</th><th>title</th><th>parent</th>
+                                <tr ng-repeat="tabmenu in tabMenuLinks"><td></td><td>{{tabmenu.menunavid}}</td><td>{{tabmenu.menunavtitle}}</td><td>{{tabmenu.parentnavid}}</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+                </div>
+                
+                <!--<div class='container-fluid'>
+                    <div class='row-fluid'>
+                        <div class='col-lg-8 col-lg-offset-2'></div>
+                    </div>
+                </div>-->
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="tabSave" ng-click="tabSave()">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Panel Warlock-->
+<div class="modal fade" id="panelWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true" ng-controller="panelCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Panel Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+             <div class="alert alert-info">If any of the check boxes are left unchecked, the panel will become a basic panel</div>
+             <div id="reqState"></div>
+                <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="panelObjId" class="col-sm-2 control-label">Panel Id:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="panelObjId" placeholder="Click on Instance List" ng-model="panelId">
+            </div>
+            
+            <label for="panelObjParId" class="col-sm-2 control-label">Panel Parent Id:</label>
+            <div class="col-sm-3">
+                <select class="form-control" id="panelObjParId" ng-model="panelParId"><option ng-repeat="container in cont" value={{container._id}}>{{container.objName}}</option></select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="panelInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+          <div class="col-sm-1">
+          <select class="form-control" id="panelInstWidth" ng-model="panelInstWidth"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+          </div>
+          
+          <label for="panelInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+          <div class="col-sm-1">
+          <select class="form-control" id="panelInstOffset" ng-model="panelInstOffset">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            
+          </select>
+          </div>
+          
+          <label for="panelInstRow" class="col-lg-2 control-label">Row:</label>
+          <div class="col-sm-1">
+          <select class="form-control" id="panelInstRow" ng-model="panelRow">
+            <option>default</option>
+            <option>new-line</option>
+          </select>
+          </div>
+          
+        </div>
+        
+        <div class="form-group">
+            <div class="checkbox">
+              <label class="col-lg-2 control-label"><input type="checkbox" id="hasHeaderCheck" ng-model="hasHeaderPanel">Has Header</label>
+            </div>
+            <div class="checkbox">
+              <label class="col-lg-2 control-label"><input type="checkbox" id="hasFooterCheck" ng-model="hasFooterPanel">Has Footer</label>
+            </div>
+            <div class="checkbox">
+              <label class="col-lg-2 control-label"><input type="checkbox" id="isModalCheck" ng-model="isModalPanel">is Modal</label>
+            </div>
+            
+            <label for="panelTitle" class="col-sm-1 control-label">Panel Title:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="panelTitle" placeholder="Enter Panel Title" ng-disabled="!hasHeaderPanel" ng-model="panelTitle">
+            </div>
+            
+            <label for="panelTitleSize" class="col-lg-1 control-label">Title Size:</label>
+          <div class="col-sm-1">
+          <select class="form-control" id="panelTitleSize" ng-disabled="!hasHeaderPanel" ng-model="panelTitleSize"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+          </div>
+          
+          <label for="panelType" class="col-lg-1 control-label">Panel Type:</label>
+          <div class="col-sm-1">
+          <select class="form-control" id="panelType" ng-model="panelType"><option>default</option><option>info</option><option>warning</option><option>success</option><option>danger</option><option>primary</option></select>
+          </div>
+          
+          <label for="panelSeq" class="col-sm-1 control-label">Sequence:</label>
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="panelSeq" ng-model="panelSeq">
+            </div>
+            
+        </div>
+        
+       </form>
+                    
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="panelSave" ng-click="panelSave()"><span class="glyphicon glyphicon-save">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Form Warlock-->
+<div class="modal fade" id="formWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true" ng-controller="formCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Form Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+                <form class="form-horizontal" role="form">
+
+                  <div class="form-group">
+                    <label for="formObjId" class="col-sm-2 control-label">Form Id:</label>
+                    <div class="col-sm-3">
+                     <input type="text" class="form-control" id="formObjId" ng-model="formObjId" placeholder="Click on Instance List">
+                    </div>
+              
+                     <label for="formObjParId" class="col-sm-2 control-label">Form Parent Id:</label>
+                     <div class="col-sm-3">
+                     <select class="form-control" id="formObjParId" ng-model="formObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                     </div>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="formInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                    <div class="col-sm-1">
+                      <select class="form-control" id="formInstWidth" ng-model="formInstWidth">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                      </select>
+                    </div>
+            
+                    <label for="formInstOffset" class="col-lg-1 control-label">Instance Offset:</label>
+                    <div class="col-sm-1">
+                      <select class="form-control" id="formInstOffset" ng-model="formInstOffset">
+                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                        
+                      </select>
+                    </div>
+                    
+                    <label for="formType" class="col-lg-1 control-label">Type:</label>
+                    <div class="col-sm-2">
+                      <select class="form-control" id="formType" ng-model="formType">
+                        <option>vertical</option>
+                        <option>horizontal</option>
+                        <option>in-line</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formInstRow" class="col-lg-2 control-label">Row:</label>
+                    <div class="col-sm-1">
+                      <select class="form-control" id="formInstRow" ng-model="formInstRow">
+                        <option>default</option>
+                        <option>new-line</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formSeq" class="col-sm-1 control-label">Sequence:</label>
+                    <div class="col-sm-1">
+                        <input type="text" class="form-control" id="formSeq" ng-model="formSeq">
+                    </div>
+                  </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="formSave" ng-click="formSave()"><span class="glyphicon glyphicon-save">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Typography Warlock-->
+<div class="modal fade" id="typoWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true" ng-controller="typoCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Typography Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">Add text objects and style them to your liking...</div>
+                <div class='container-fluid'>
+
+                  <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="typoObjId" class="col-sm-2 control-label">Typo Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="typoObjId" ng-model="typoObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="typoObjParId" class="col-sm-2 control-label">Typo Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="typoObjParId" ng-model="typoObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="typoInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="typoInstWidth" ng-model="typoInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="typoInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="typoInstOffset" ng-model="typoInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="typoInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="typoInstRow" ng-model="typoInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="typoSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="typoSeq" ng-model="typoSeq">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="typoType" class="col-lg-2 control-label">Type</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" ng-model="typoType" id="typoTypo" ng-change="typoTypeSelect()"><option>Heading</option><option>Lead</option><option>Emphasis</option><option>Blockquotes</option><option>Lists</option><option>Addresses</option></select>
+                            </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Options</h3></div>
+                      <div class="panel-body">
+
+                        <div class="panel panel-success">
+                          <div class="panel-body">
+                            <form class="form-horizontal" role="form">
+                              <div class="form-group">
+                                <label for="typoTextSource" class="col-lg-2 control-label">Text Source:</label>
+                                <div class="col-sm-8">
+                                  <select class="form-control" id="typoTextSource" ng-model="typoTextSource" ng-change="typoTextSourceSelect()"><option>Static Text</option><option>Database Text</option><option>Service Text</option></select>
+                                </div>
+                              </div>
+                            </form>
+
+                            <div class="panel panel-success" ng-show="typoStaticTextShow">
+                              <div class="panel-body">
+                                <form class="form-vertical" role="form">
+                                  <div class="form-group">
+                                    <label for="typoTextStatic" class="col-lg-2 control-label">Input Text:</label>
+                                    <textarea class="form-control" ng-model="typoTextStatic" ></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="panel-footer"><h6>Static Text</h6></div>
+                            </div>
+
+                            <div class="panel panel-success" ng-show="typoDbTextShow">
+                              <div class="panel-body">
+                                <form class="form-vertical" role="form">
+                                  <div class="form-group">
+                                    <label for="typoTextSourceDB" class="col-lg-2 control-label">Database Name:</label>
+                                    <select class="form-control" ng-model="typoTextSourceDB" id="typoTextSourceDB"><option>db1</option></select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="typoTextSourceDBQuery" class="col-lg-2 control-label">Database Query:</label>
+                                    <textarea class="form-control" ng-model="typoTextSourceDBQuery" id="typoTextSourceDBQuery"></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="panel-footer"><h3>Database Text</h3></div>
+                            </div>
+
+                            <div class="panel panel-success" ng-show="typoServiceTextShow">
+                              <div class="panel-body">
+                                <form class="form-vertical" role="form">
+                                  <div class="form-group">
+                                    <label for="typoTextSourceService" class="col-lg-2 control-label">Service Name:</label>
+                                    <select class="form-control" ng-model="typoTextSourceService" id="typoTextSourceService"><option>Service1</option></select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="typoTextSourceServiceVar" class="col-lg-2 control-label">Service Variable:</label>
+                                    <textarea class="form-control" ng-model="typoTextSourceServiceVar" id="typoTextSourceServiceVar"></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="panel-footer"><h3>Service Text</h3></div>
+                            </div>
+
+
+                          </div>
+                          <div class="panel-footer"><h5>Text Source Configuration</h5></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoHeadingShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Headings Configuration</h3></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoLeadShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Lead Body Copy Configuration</h3></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoEmphasisShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Emphasis Configuration</h3></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoBlockShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Blockquotes Configuration</h3></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoListsShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Lists Configuration</h3></div>
+                        </div>
+
+                        <div class="panel panel-success" ng-show="typoAddrShow">
+                          <div class="panel-body">configd</div>
+                          <div class="panel-footer"><h3>Addresses Configuration</h3></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="typoSave()">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Accordion Warlock-->
+<div class="modal fade" id="accordionWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Accordion Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="accoObjId" class="col-sm-2 control-label">Accordion Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="accoObjId" ng-model="accoObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="accoObjParId" class="col-sm-2 control-label">Accordion Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="accoObjParId" ng-model="accoObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="accoInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="accoInstWidth" ng-model="accoInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="accoInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="accoInstOffset" ng-model="accoInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="accoInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="accoInstRow" ng-model="accoInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="accoSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="accoSeq" ng-model="accoSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Table Warlock-->
+<div class="modal fade" id="tableWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Table Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="datatblObjId" class="col-sm-2 control-label">Text Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="datatblObjId" ng-model="datatblObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="datatblObjParId" class="col-sm-2 control-label">Text Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="datatblObjParId" ng-model="datatblObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="datatblInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="datatblInstWidth" ng-model="datatblInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="datatblInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="datatblInstOffset" ng-model="datatblInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="datatblInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="datatblInstRow" ng-model="datatblInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="datatblSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="datatblSeq" ng-model="datatblSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Listgroup Warlock-->
+<div class="modal fade" id="listgroupWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Listgroup Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="lstgrpObjId" class="col-sm-2 control-label">ListGroup Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="lstgrpObjId" ng-model="lstgrpObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="lstgrpObjParId" class="col-sm-2 control-label">ListGroup Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="lstgrpObjParId" ng-model="lstgrpObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="lstgrpInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="lstgrpInstWidth" ng-model="lstgrpInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="lstgrpInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="lstgrpInstOffset" ng-model="lstgrpInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="lstgrpInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="lstgrpInstRow" ng-model="lstgrpInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="textSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="lstgrpSeq" ng-model="lstgrpSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Carousel Warlock-->
+<div class="modal fade" id="carouselWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Carousel Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="caroObjId" class="col-sm-2 control-label">Carousel Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="caroObjId" ng-model="caroObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="caroObjParId" class="col-sm-2 control-label">Carousel Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="caroObjParId" ng-model="caroObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="caroInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="caroInstWidth" ng-model="caroInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="caroInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="caroInstOffset" ng-model="caroInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="caroInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="caroInstRow" ng-model="caroInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="caroSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="caroSeq" ng-model="caroSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Button Warlock-->
+<div class="modal fade" id="buttonWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Button Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="btnObjId" class="col-sm-2 control-label">Button Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="btnObjId" ng-model="btnObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="btnObjParId" class="col-sm-2 control-label">Button Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="btnObjParId" ng-model="btnObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="btnInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="btnInstWidth" ng-model="btnInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="btnInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="btnInstOffset" ng-model="btnInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="btnInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="btnInstRow" ng-model="btnInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="btnSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="btnSeq" ng-model="btnSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3>Object Options</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="btnInputLabel" class="col-sm-2 control-label">Input Label:</label>
+                                    <div class="col-sm-8"><input type="text" id="btnInputLabel" ng-model="btnInputLabel" class="form-control" /></div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                     <div class="checkbox">
+                                        <label>
+                                           <input type="checkbox"> Button Image
+                                        </label>
+                                     </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                     <div class="checkbox">
+                                        <label>
+                                           <input type="checkbox"> Button Glyphicon
+                                        </label>
+                                     </div>
+                                  </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Text Warlock-->
+<div class="modal fade" id="textWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true" ng-controller="textCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Text Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="alert alert-info">Set up text capture inputs...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="textObjId" class="col-sm-2 control-label">Text Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="textObjId" ng-model="textObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="textObjParId" class="col-sm-2 control-label">Text Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="textObjParId" ng-model="textObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="textInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="textInstWidth" ng-model="textInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="textInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="textInstOffset" ng-model="textInstOffset">
+                                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="textInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="textInstRow" ng-model="textInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="textSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="textSeq" ng-model="textSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3>Object Options</h3></div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="textInputLabel" class="col-sm-2 control-label">Input Label:</label>
+                                    <div class="col-sm-8"><input type="text" id="textInputLabel" ng-model="textInputLabel" class="form-control" /></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="textInputType" class="col-sm-2 control-label">Input Type:</label>
+                                    <div class="col-sm-8"><select class="form-control" id="textInputType" ng-model="textInputType"><option>Text</option><option>TextArea</option><option>Password</option><option>Hidden</option></select></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="textInputMin" class="col-sm-2 control-label">Min Length:</label>
+                                    <div class="col-sm-8"><input type="text" id="textInputMin" ng-model="textInputMin" class="form-control" /></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="textInputMax" class="col-sm-2 control-label">Max Length:</label>
+                                    <div class="col-sm-8"><input type="text" id="textInputMax" ng-model="textInputMax" class="form-control" /></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="textInputReg" class="col-sm-2 control-label">Regex Pattern:</label>
+                                    <div class="col-sm-8"><input type="text" id="textInputReg" ng-model="textInputReg" class="form-control" /></div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                     <div class="checkbox">
+                                        <label>
+                                           <input type="checkbox" ng-model="textInputRequired"> Input Required
+                                        </label>
+                                     </div>
+                                  </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="textSave()" >Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Image Warlock-->
+<div class="modal fade" id="imageWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Image Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="alert alert-info">Setup Image Object...</div>
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="imgObjId" class="col-sm-2 control-label">Image Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="imgObjId" ng-model="imgObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="imgObjParId" class="col-sm-2 control-label">Image Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="imgObjParId" ng-model="imgObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="imgInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="imgInstWidth" ng-model="imgInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="imgInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="imgInstOffset" ng-model="imgInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="imgInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="imgInstRow" ng-model="imgInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="imgSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="imgSeq" ng-model="imgSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Menu Warlock-->
+<div class="modal fade" id="menuWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Menu Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="menuObjId" class="col-sm-2 control-label">Menu Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="menuObjId" ng-model="menuObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="menuObjParId" class="col-sm-2 control-label">Menu Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="menuObjParId" ng-model="menuObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="menuInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="menuInstWidth" ng-model="menuInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="menuInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="menuInstOffset" ng-model="menuInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="menuInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="menuInstRow" ng-model="menuInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="menuSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="menuSeq" ng-model="menuSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Toolbar Warlock-->
+<div class="modal fade" id="toolbarWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Toolbar Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="toolObjId" class="col-sm-2 control-label">Toolbar Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="toolObjId" ng-model="toolObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="toolObjParId" class="col-sm-2 control-label">Toolbar Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="toolObjParId" ng-model="toolObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="toolInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="toolInstWidth" ng-model="toolInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="toolInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="toolInstOffset" ng-model="toolInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="toolInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="toolInstRow" ng-model="toolInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="toolSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="toolSeq" ng-model="toolSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Breadcrumb Warlock-->
+<div class="modal fade" id="breadcrumbWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Breadcrumb Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="breadObjId" class="col-sm-2 control-label">Breadcrumb Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="breadObjId" ng-model="breadObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="breadObjParId" class="col-sm-2 control-label">Breadcrumb Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="breadObjParId" ng-model="breadObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="breadInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="breadInstWidth" ng-model="breadInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="breadInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="breadInstOffset" ng-model="breadInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="breadInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="breadInstRow" ng-model="breadInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="breadSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="breadSeq" ng-model="breadSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Paginator Warlock-->
+<div class="modal fade" id="paginatorWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Paginator Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="pagiObjId" class="col-sm-2 control-label">Paginator Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="pagiObjId" ng-model="pagiObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="pagiObjParId" class="col-sm-2 control-label">Paginator Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="pagiObjParId" ng-model="pagiObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="pagiInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="pagiInstWidth" ng-model="pagiInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="pagiInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="pagiInstOffset" ng-model="pagiInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="pagiInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="pagiInstRow" ng-model="pagiInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="pagiSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="pagiSeq" ng-model="pagiSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Progressbar Warlock-->
+<div class="modal fade" id="progressbarWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Progressbar Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="progbarObjId" class="col-sm-2 control-label">Progressbar Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="progbarObjId" ng-model="progbarObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="progbarObjParId" class="col-sm-2 control-label">Progressbar Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="progbarObjParId" ng-model="progbarObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="progbarInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="progbarInstWidth" ng-model="progbarInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="progbarInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="progbarInstOffset" ng-model="progbarInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="progbarInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="progbarInstRow" ng-model="progbarInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="progbarSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="progbarSeq" ng-model="progbarSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Media Object Warlock-->
+<div class="modal fade" id="mediaobjWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Media Object Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="mediaObjId" class="col-sm-2 control-label">Media Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="mediaObjId" ng-model="mediaObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="mediaObjParId" class="col-sm-2 control-label">Media Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="mediaObjParId" ng-model="mediaObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="mediaInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="mediaInstWidth" ng-model="mediaInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="mediaInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="mediaInstOffset" ng-model="mediaInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="mediaInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="mediaInstRow" ng-model="mediaInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="mediaSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="mediaSeq" ng-model="mediaSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Tooltip Warlock-->
+<div class="modal fade" id="tooltipWarlock" tabindex="-1" role="dialog" aria-labelledby="panelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h3 class="modal-title" id="panelLabel">Tooltip Warlock<img src="/images/icons/active/by32/wand.png"class="img-rounded"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">The form will not be visible until some elements have been added to it...</div>
+
+                <div class="col-sm-5">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading"><h3>Object Parameters</h3></div>
+                      <div class="panel-body">
+                        <form class="form-horizontal" role="form" >
+
+                          <div class="form-group">
+                            <label for="tipObjId" class="col-sm-2 control-label">Tooltip Id:</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="tipObjId" ng-model="tipObjId" placeholder="Object Id" />
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                             <label for="tipObjParId" class="col-sm-2 control-label">Text Parent Id:</label>
+                             <div class="col-sm-8">
+                               <select class="form-control" id="tipObjParId" ng-model="tipObjParId"><option ng-repeat="container in cont" value={{container._id}} >{{container.objName}}</option></select>
+                             </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="tipInstWidth" class="col-lg-2 control-label">Instance Width:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="tipInstWidth" ng-model="tipInstWidth">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="tipInstOffset" class="col-lg-2 control-label">Instance Offset:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="tipInstOffset" ng-model="tipInstOffset">
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="tipInstRow" class="col-lg-2 control-label">Row:</label>
+                            <div class="col-sm-8">
+                              <select class="form-control" id="tipInstRow" ng-model="tipInstRow">
+                                <option>default</option>
+                                <option>new-line</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="tipSeq" class="col-sm-2 control-label">Sequence:</label>
+                              <div class="col-sm-8">
+                                  <input type="text" class="form-control" id="tipSeq" ng-model="tipSeq">
+                              </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

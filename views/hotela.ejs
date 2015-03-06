@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link href="/stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <script type="text/javascript" src="/javascripts/jquery.js"></script>
+
+  <script src="/javascripts/angular.min.js"></script>
+  <script type="text/javascript" src="/javascripts/test.js"></script>
+  
+
+  
+</head>
+<body ng-app="dvDirectives">
+
+
+    <div class="container-fluid">
+
+      <div class="row-fluid">
+        <div class="container">
+          <div class="jumbotron">
+            <p><img ng-src="/images/hotel_logo.jpg" width="30%" />
+            <button type="button" class="btn btn-default btn-lg" id="createText"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/user_go.png"class="img-rounded">Login</button>
+            </p><h1>Welcome to Hotel@</h1><p>For hotel management tasks</p>
+          </div>
+        </div>
+      </div>
+
+      <dv-tab conf='{"type":"tabs", "stacked":false, "width":10, "offset":1}' links='Admin,Reservations,Guests,Rooms,Cashier,Events,Main'>
+
+      <dv-tab-pane conf='{"active":true, "anim":"fade", "linkTo":"Admin"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Admin Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Users Search</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">New User</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Users</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Roles</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">System Params</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Reservations"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Reservations Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">RSV Search</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">New Reservation</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Walk In</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">New Group</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Quotation</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Rooming List</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Guests"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Guests Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Guests in House</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">Arrivals</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Guest Profile</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Rooms"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Rooms Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Room Info</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">Room Status</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Availability</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Tape Chart</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Free Rooms</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Cashier"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Cashier Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Currency Exch</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">Find Folio</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Search Folio</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Cashier Shifts</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Non Room Folio</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Post Charges</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Events"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Events Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Events Search</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">New Event</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Events Chart</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Events</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      <dv-tab-pane conf='{"active":false, "anim":"fade", "linkTo":"Main"}'>
+        <dv-panel conf='{"type":"primary", "width":0, "offset":0, "title":"Main Ops", "titleSize":4}'>
+          <dv-panel conf='{"type":"info", "width":3, "offset":0, "title":"Actions", "titleSize":4}'>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Services</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/new.png"class="img-rounded">Manage Stock</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Inventory</button>
+          <button type="button" class="btn btn-default btn-sm"   data-toggle="modal" data-target="#textWarlock" ><img src="/images/icons/active/by32/search_accounts.png"class="img-rounded">Manage Suppliers</button>
+        </dv-panel>
+        </dv-panel>
+      </dv-tab-pane>
+
+      </dv-tab>
+
+    </div>
+
+
+
+  
+  <script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
